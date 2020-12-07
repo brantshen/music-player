@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Music Playlist</title>
+
+    <link rel="stylesheet" href="font-awesome/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    
+    <div class="main">
+        <p class="logo"><i class="fa fa-music" aria-hidden="true"></i></p>
+
+        <div class="left">
+            <img src="" id="track_img">
+            <div class="volume">
+            <p id="volume_show">90</p>
+            <i class="fa fa-volume-up" aria-hidden="true" id="volume_icon" onclick="mute_sound()"></i>
+            <input type="range" min="0" max="100" value="90" onchange="volume_change()" />
+        </div>
+    </div>
+
+    <div class="right">
+        <div class="show_song_no">
+            <p id="present">1</p>
+            <p>/</p>
+            <p id="total">5</p>
+        </div>
+
+        <p class="title">title.mp4</p>
+        <p class="artist">Artist Name</p> 
+        
+        <div class="middle">
+        <button id="pre" onclick="previous_song()"><i class="fa fa-step-backward" aria-hidden="true"></i></button>
+        <button id="play" onclick="justplay()"><i class="fa fa-play" aria-hidden="true"></i></button>
+        <button id="next" onclick="next_song()"><i class="fa fa-step-forward" aria-hidden="true"></i></button>
+        </div>
+        <div class="duration">
+                <input type="range" id="duration_slider" min="0" max="100" value="0" onchange="change_duration()">
+        </div>
+        <button id="auto_play" onclick="autoplay_switch()">Auto play <i class="fa fa-circle-notch" aria-hidden="true"></i></button>
+
+    </div>
+
+   
+
+    
+
+    </div>
+
+    <script src="font-awesome/all.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
